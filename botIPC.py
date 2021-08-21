@@ -4,7 +4,9 @@ import sys
 import time
 import asyncio
 import zmq.asyncio
-port = "5666"
+import os
+
+port = os.getenv("PORT")
 
 async def async_connect():
     ctx = zmq.asyncio.Context()

@@ -4,12 +4,13 @@ from botIPC import bind
 import telegram
 socket = bind()
 T_TOKEN = os.getenv("T_TOKEN")
-CHAT_ID = -495783570
+CHAT_ID = os.getenv("CHAT_ID")
 
 
 def send_message(update, context):
-    message_string = "from : " + \
-        update.message.from_user.first_name+"\n"+update.message.text
+    if(str(update.message.chat_id)!=CHAT_ID):return;
+    message_string = "<**" + \
+        update.message.from_user.first_name+"**> "+update.message.text
 
     socket.send_string(message_string)
 
@@ -22,7 +23,7 @@ def main():
     updater.start_polling()
     while True:
         msg = socket.recv().decode("UTF-8")
-        bot.sendMessage(chat_id=CHAT_ID, text=msg)
+        bot.sendMessage(chat_id=CHAT_ID, text=msg,parse_mode="Markdown")
 
 
 if __name__ == '__main__':

@@ -6,6 +6,7 @@ from botIPC import async_connect
 BLACK_LIST = []
 TOKEN = os.getenv('D_TOKEN')
 GUILD = os.getenv('G_TOKEN')
+CHANNEL_NAME = os.getenv("CHANNEL_NAME")
 client = discord.Client()
 sock = ""
 
@@ -26,8 +27,8 @@ async def on_message(message):
     channel = message.channel.name
     if channel in BLACK_LIST:
         return
-    message_string = "Channel Name : " + channel + "\n" + \
-        "from : " + message.author.name + "\n"+message.content
+    message_string = '[' + channel+']'  + \
+        "<*" + message.author.name + "*> "+message.content
 
     dispatched = [message_string.encode("UTF-8")]
 
@@ -40,7 +41,7 @@ async def send_message(mesg, chnl):
 
 
 async def main(sock):
-    main_channel = discord.utils.get(client.get_all_channels(), name="general")
+    main_channel = discord.utils.get(client.get_all_channels(), name=CHANNEL_NAME)
     while True:
         from_telegram = await sock.recv_multipart()
 
@@ -49,4 +50,3 @@ async def main(sock):
 
 
 client.run(TOKEN)
-# asyncio.run(main());
