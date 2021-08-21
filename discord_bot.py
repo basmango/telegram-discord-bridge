@@ -26,7 +26,7 @@ async def on_message(message):
     channel = message.channel.name
     if channel in BLACK_LIST:
         return
-    message_string = '[' + channel+']'  + \
+    message_string = '\[' + channel+']'  + \
         "<*" + message.author.name + "*> "+message.content
 
     dispatched = [message_string.encode("UTF-8")]
