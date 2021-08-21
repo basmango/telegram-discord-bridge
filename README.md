@@ -11,10 +11,6 @@ A Telegram Discord bridge made using Zero MQ
 7. Use the command ``pipenv shell`` , it should install the dependecies automatically.
 8. Run the bot python scripts. (`telegram_bot.py`,`discord_bot.py`)
 
-## Additional notes
-1. You can modify the socket url and port in the `botIPC.py` file. 
-2. You can specify which discord channel the telegram messages are sent to by default in  `discord_bot.py`.
-
 ## TODO
 1. Use Message embeds for discord.
 2. Implement cross platform replies.
