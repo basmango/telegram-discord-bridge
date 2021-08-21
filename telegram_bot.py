@@ -1,4 +1,4 @@
-from telegram.ext import Updater, InlineQueryHandler, MessageHandler, CommandHandler, Filters
+from telegram.ext import Updater, MessageHandler, Filters
 import os
 from botIPC import bind
 import telegram

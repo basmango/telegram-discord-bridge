@@ -1,6 +1,5 @@
 import discord
 import os
-import threading
 import asyncio
 from botIPC import async_connect
 BLACK_LIST = []
