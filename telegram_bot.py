@@ -1,6 +1,6 @@
 from telegram.ext import Updater, MessageHandler, Filters
 import os
-from botIPC import bind
+from bot_ipc import bind
 import telegram
 socket = bind()
 T_TOKEN = os.getenv("T_TOKEN")
