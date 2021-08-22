@@ -2,6 +2,7 @@ import discord
 import os
 import asyncio
 from botIPC import async_connect
+
 BLACK_LIST = []
 TOKEN = os.getenv('D_TOKEN')
 GUILD = os.getenv('G_TOKEN')
