@@ -47,5 +47,5 @@ async def main(sock):
         from_telegram = from_telegram[0].decode("UTF-8")
         await send_message(from_telegram, main_channel)
 
-
-client.run(TOKEN)
+if __name__=="__main__":
+    client.run(TOKEN)
