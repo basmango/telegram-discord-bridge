@@ -8,6 +8,7 @@ CHAT_ID = os.getenv("CHAT_ID")
 
 
 def send_message(update, context):
+    print(str(update.message.chat_id));
     if(str(update.message.chat_id)!=CHAT_ID):return;
     message_string = "<**" + \
         update.message.from_user.first_name+"**> "+update.message.text

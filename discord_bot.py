@@ -3,7 +3,7 @@ import os
 import asyncio
 from bot_ipc import async_connect
 
-BLACK_LIST = []
+BLACK_LIST = ["👋-welcome"]
 TOKEN = os.getenv('D_TOKEN')
 GUILD = os.getenv('G_TOKEN')
 CHANNEL_NAME = os.getenv("CHANNEL_NAME")
