@@ -1,0 +1,14 @@
+[Unit]
+Description= Systemd service for telegram bot
+After=network.target
+
+[Service]
+User=USER
+Restart=always
+Type=simple
+WorkingDirectory=/home/USER/telegram-discord-bridge
+ExecStart=python3 -m pipenv run python3 telegram_bot.py 
+
+[Install]
+WantedBy=multi-user.target
+
