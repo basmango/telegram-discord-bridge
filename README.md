@@ -8,7 +8,7 @@ A Telegram Discord bridge made using Zero MQ
 4. Invite the telegram bot to your group
 5. Acquire the group id of your telegram group by inviting @RawDataBot to your group ( you must have a telegram username for this) alteratively get it via your bot itself (message.chat_id)
 6. Make a `.env` file similar to the `.env.demo` file and enter all the required credentials.
-7. Use the command ``pipenv shell`` , it should install the dependecies automatically.
+7. Use the command ``pipenv shell`` , it should install the dependencies automatically.
 8. Run the bot python scripts. (`telegram_bot.py`,`discord_bot.py`)
 
 ## TODO
