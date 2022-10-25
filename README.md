@@ -1,5 +1,5 @@
 # telegram-discord-bridge 🌉
-A Telegram Discord bridge made using Zero MQ
+A Telegram Discord bridge made using Zero MQ and managed with Systemd
 
 ## Instructions
 1. Clone this respository.
